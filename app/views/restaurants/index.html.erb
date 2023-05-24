@@ -1,0 +1,14 @@
+<h1>Restaurants#index</h1>
+<%= link_to "Top Restaurants", top_restaurants_path, class: "btn btn-success" %>
+
+<ul>
+<% @restaurants.each do |restaurant| %>
+  <li><%= link_to restaurant.name, restaurant_path(restaurant) %> | <%= link_to "See Chef", chef_restaurant_path(restaurant), class: "btn btn-info" %></li>
+<% end %>
+</ul>
+<!-- <%=  %>  Atalho feito com 'pe' -->
+
+<!-- <%  %>  Atalho feito com 'er' -->
+
+<%= link_to "Create Restaurant", new_restaurant_path, class: "btn btn-secondary" %>
+
